@@ -20,7 +20,8 @@ var config = {
         query: {
           presets: ['react', 'es2015', 'stage-2']
         }
-      }
+      },
+      { test: /\.scss$/, loaders: ['style', 'css', 'sass'] }
     ]
   }
 };
