@@ -7,6 +7,7 @@ import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert';
 import FlatButton from 'material-ui/FlatButton';
 import {blue900} from 'material-ui/styles/colors';
 import FontIcon from 'material-ui/FontIcon';
+import BlogList from './blog_list';
 
 class Body extends React.Component {
 	render() {
@@ -28,6 +29,11 @@ class Body extends React.Component {
 				<div className="section">
 					<div className="container-fluid">
             <h1>Header</h1>
+					</div>
+				</div>
+				<div className="section" style={AppBarStyle}>
+					<div className="container-fluid">
+						<BlogList />
 					</div>
 				</div>
 			</div>
