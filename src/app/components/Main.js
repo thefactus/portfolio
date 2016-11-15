@@ -1,12 +1,13 @@
 import React from "react";
 import injectTapEventPlugin from "react-tap-event-plugin";
 import Navbar from './navbar';
+import Body from './body';
 
 const Main = (props) => {
   return (
     <div>
       <Navbar />
-      <h1>Hello World</h1>
+      <Body />
     </div>
   );
 }
