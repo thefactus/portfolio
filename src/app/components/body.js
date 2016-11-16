@@ -8,6 +8,7 @@ import FlatButton from 'material-ui/FlatButton';
 import {blue900} from 'material-ui/styles/colors';
 import FontIcon from 'material-ui/FontIcon';
 import BlogList from './blog_list';
+import BottomNav from './bottom_nav';
 
 class Body extends React.Component {
 	render() {
@@ -36,6 +37,9 @@ class Body extends React.Component {
 						<BlogList />
 					</div>
 				</div>
+        <div className="bottom-nav-fixed">
+          <BottomNav />
+        </div>
 			</div>
 		)
 	}
