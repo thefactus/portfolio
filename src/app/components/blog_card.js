@@ -7,7 +7,6 @@ import ToggleStar from 'material-ui/svg-icons/toggle/star';
 import ActionGrade from 'material-ui/svg-icons/action/grade';
 
 var BlogCard = React.createClass({
-
   getInitialState: function() {
     return {
     }
@@ -15,14 +14,14 @@ var BlogCard = React.createClass({
 
   render() {
 
-	const style = {
-		margin: 12,
-	};
+    const style = {
+      margin: 12,
+    };
 
-	const card_style = {
-		marginTop: 12,
-		marginBottom: 12,
-	};
+    const card_style = {
+      marginTop: 12,
+      marginBottom: 12,
+    };
 
     return (
       <div>

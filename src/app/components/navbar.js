@@ -11,7 +11,6 @@ import {blue900} from 'material-ui/styles/colors';
 import FontIcon from 'material-ui/FontIcon';
 
 class Navbar extends React.Component {
-
 	constructor(props) {
 		super(props);
 		this.state = {open: false};

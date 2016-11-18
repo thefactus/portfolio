@@ -7,12 +7,31 @@ import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert';
 import FlatButton from 'material-ui/FlatButton';
 import {blue900} from 'material-ui/styles/colors';
 import FontIcon from 'material-ui/FontIcon';
+import Profile from './profile';
 import BlogList from './blog_list';
+import PortfolioList from './portfolio_list';
 import BottomNav from './bottom_nav';
 
-class Body extends React.Component {
-	render() {
+var Body = React.createClass({
+  getInitialState() {
+    return {
+      content: <Profile />
+    };
+  },
 
+  changeContent(index) {
+    if (index == 1) {
+      this.setState({
+        content: <BlogList />
+      })
+    } else {
+      this.setState({
+        content: <Profile />
+      })
+    }
+  },
+
+	render() {
 		const AppBarStyle = {
 			backgroundColor: blue900
 		};
@@ -27,22 +46,17 @@ class Body extends React.Component {
 
 		return (
 			<div>
-				<div className="section">
-					<div className="container-fluid">
-            <h1>Header</h1>
-					</div>
-				</div>
 				<div className="section" style={AppBarStyle}>
 					<div className="container-fluid">
-						<BlogList />
+            {this.state.content}
 					</div>
 				</div>
         <div className="bottom-nav-fixed">
-          <BottomNav />
+          <BottomNav handleContent={this.changeContent} />
         </div>
 			</div>
 		)
 	}
-};
+});
 
 export default Body;

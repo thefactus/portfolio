@@ -19,7 +19,10 @@ class BottomNav extends Component {
     selectedIndex: 0,
   };
 
-  select = (index) => this.setState({selectedIndex: index});
+  select(index) { 
+    this.setState({selectedIndex: index});
+    this.props.handleContent(index);
+  }
 
   render() {
     return (
@@ -36,7 +39,7 @@ class BottomNav extends Component {
             onTouchTap={() => this.select(1)}
           />
           <BottomNavigationItem
-            label="Portfolio"
+            label="Projects"
             icon={portfolio}
             onTouchTap={() => this.select(2)}
           />
