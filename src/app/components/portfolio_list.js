@@ -29,9 +29,6 @@ var PortfolioList = React.createClass({
           <div className="col-xs">
             <PortfolioCard />
           </div>
-          <div className="col-xs">
-            <PortfolioCard />
-          </div>
         </div>
       </div>
 	  )

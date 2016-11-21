@@ -7,6 +7,7 @@ import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert';
 import FlatButton from 'material-ui/FlatButton';
 import {blue900} from 'material-ui/styles/colors';
 import FontIcon from 'material-ui/FontIcon';
+import Navbar from "./navbar";
 import Profile from './profile';
 import BlogList from './blog_list';
 import PortfolioList from './portfolio_list';
@@ -60,6 +61,7 @@ var Body = React.createClass({
 
 		return (
 			<div>
+        <Navbar handleContent={this.changeContent} />
 				<div className="section" style={AppBarStyle}>
 					<div className="container-fluid">
             {this.state.content}

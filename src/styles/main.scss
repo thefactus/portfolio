@@ -19,6 +19,10 @@ body {
 
 /* Remove margins and padding from the list, and add a black background color */
 
+.navbar-right {
+	float: right;
+}
+
 .topnav {
   margin: 0;
   padding: 0;
@@ -74,11 +78,24 @@ body {
   }
 }
 
+@media screen and (max-width: 680px) {
+  .navbar-right {
+		display: none;
+  }
+}
+
 .bottom-nav-fixed {
-   position:fixed;
-   left:0px;
-   bottom:0px;
-   height:56px;
-   width:100%;
-   background:#999;
+  position:fixed;
+  left:0px;
+  bottom:0px;
+  height:56px;
+  width:100%;
+  background:#999;
+  display: none;
  }
+
+@media screen and (max-width: 680px) {
+  .bottom-nav-fixed {
+    display: initial;
+  }
+}
