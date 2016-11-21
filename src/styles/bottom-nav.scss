@@ -1,0 +1,15 @@
+.bottom-nav-fixed {
+  position:fixed;
+  left:0px;
+  bottom:0px;
+  height:56px;
+  width:100%;
+  background:#999;
+  display: none;
+ }
+
+@media screen and (max-width: 680px) {
+  .bottom-nav-fixed {
+    display: initial;
+  }
+}

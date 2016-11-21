@@ -1,0 +1,58 @@
+.navbar-right {
+	float: right;
+}
+
+.topnav {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #F6F5F5;
+  ul {
+    padding: 0;
+    list-style-type: none;
+    float: left;
+  }
+  ul.topnav-right {
+    padding: 0;
+    list-style-type: none;
+    float: right;
+  }
+  li {
+    float: left;
+    a {
+      display: inline-block;
+      color: #000;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      transition: 0.3s;
+      font-size: 17px;
+      &:hover {
+        // background-color: #555;
+      }
+    }
+    &.icon {
+      display: none;
+    }
+  }
+}
+
+
+/* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.icon) */
+@media screen and (max-width: 680px) {
+  .topnav li {
+    &:not(:first-child) {
+      display: none;
+    }
+    &.icon {
+      display: inline-block;
+    }
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .navbar-right {
+		display: none;
+  }
+}
+
