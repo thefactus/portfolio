@@ -8,20 +8,39 @@ var Contact = React.createClass({
 	},
 
 	render() {
+		const textField = {
+			color: 'white'
+		};
+
 		return (
 			<div>
-        <TextField
-          floatingLabelText="Your name"
-        />
-        <TextField
-          floatingLabelText="Your email"
-        />
-        <TextField
-          floatingLabelText="Your message"
-          multiLine={true}
-          rows={2}
-          rowsMax={8}
-        />
+				<div className="row">
+          <div className="col-sm-12 col-lg-offset-3 col-lg-6">
+            <h2>Contact</h2>
+            <p>Lorem ipsum</p>
+            <TextField
+              floatingLabelText="Your name"
+              inputStyle={textField}
+              floatingLabelStyle={textField}
+              fullWidth={true}
+            /><br />
+            <TextField
+              floatingLabelText="Your email"
+              inputStyle={textField}
+              floatingLabelStyle={textField}
+              fullWidth={true}
+            /><br />
+            <TextField
+              floatingLabelText="Your message"
+              multiLine={true}
+              rows={2}
+              rowsMax={8}
+              textareaStyle={textField}
+              floatingLabelStyle={textField}
+              fullWidth={true}
+            /><br />
+          </div>
+        </div>
 			</div>
 		)
 	}
