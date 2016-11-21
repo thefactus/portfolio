@@ -10,6 +10,7 @@ import FontIcon from 'material-ui/FontIcon';
 import Profile from './profile';
 import BlogList from './blog_list';
 import PortfolioList from './portfolio_list';
+import Contact from './contact';
 import BottomNav from './bottom_nav';
 
 var Body = React.createClass({
@@ -20,14 +21,27 @@ var Body = React.createClass({
   },
 
   changeContent(index) {
-    if (index == 1) {
-      this.setState({
-        content: <BlogList />
-      })
-    } else {
-      this.setState({
-        content: <Profile />
-      })
+    switch(index) {
+      case 1:
+        this.setState({
+          content: <BlogList />
+        });
+        break;
+      case 2:
+        this.setState({
+          content: <PortfolioList />
+        });
+        break;
+      case 3:
+        this.setState({
+          content: <Contact />
+        });
+        break;
+      default:
+        this.setState({
+          content: <Profile />
+        });
+        break;
     }
   },
 

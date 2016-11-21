@@ -7,14 +7,12 @@ import ToggleStar from 'material-ui/svg-icons/toggle/star';
 import ActionGrade from 'material-ui/svg-icons/action/grade';
 
 var PortfolioCard = React.createClass({
-
 	getInitialState: function() {
 		return {
 		}
 	},
 
 	render() {
-
 		const style = {
 			margin: 12,
 		};

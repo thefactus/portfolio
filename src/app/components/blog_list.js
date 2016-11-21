@@ -8,7 +8,6 @@ import ActionGrade from 'material-ui/svg-icons/action/grade';
 import BlogCard from './blog_card';
 
 var BlogList = React.createClass({
-
 	getInitialState: function() {
 		return {
 		}

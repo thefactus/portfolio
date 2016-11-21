@@ -1,7 +1,6 @@
 import React from 'react';
 
 var Profile = React.createClass({
-
 	getInitialState: function() {
 		return {
 		}

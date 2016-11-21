@@ -13,7 +13,6 @@ var BlogCard = React.createClass({
   },
 
   render() {
-
     const style = {
       margin: 12,
     };

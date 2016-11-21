@@ -8,7 +8,6 @@ import ActionGrade from 'material-ui/svg-icons/action/grade';
 import PortfolioCard from './portfolio_card';
 
 var PortfolioList = React.createClass({
-
   getInitialState: function() {
     return {
     }
