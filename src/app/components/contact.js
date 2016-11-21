@@ -15,7 +15,7 @@ var Contact = React.createClass({
 		return (
 			<div>
 				<div className="row">
-          <div className="col-sm-12 col-lg-offset-3 col-lg-6">
+          <div className="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-3 col-md-6 col-lg-offset-3 col-lg-6">
             <h2>Contact</h2>
             <p>Lorem ipsum</p>
             <TextField
