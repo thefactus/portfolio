@@ -5,11 +5,22 @@ import FlatButton from 'material-ui/FlatButton';
 import IconButton from 'material-ui/IconButton';
 import ToggleStar from 'material-ui/svg-icons/toggle/star';
 import ActionGrade from 'material-ui/svg-icons/action/grade';
+import BlogView from './blog_view';
 
 var BlogCard = React.createClass({
   getInitialState: function() {
     return {
     }
+  },
+
+  openContent(){
+    this.props.openContent(
+      <BlogView />,
+      {
+        backgroundColor: 'white',
+        color: 'black'
+      }
+    )
   },
 
   render() {
@@ -33,6 +44,7 @@ var BlogCard = React.createClass({
             <FlatButton
               label="Read more"
               primary={true}
+              onTouchTap={this.openContent}
             />
           </CardActions>
         </Card>

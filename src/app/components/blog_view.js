@@ -5,9 +5,8 @@ import FlatButton from 'material-ui/FlatButton';
 import IconButton from 'material-ui/IconButton';
 import ToggleStar from 'material-ui/svg-icons/toggle/star';
 import ActionGrade from 'material-ui/svg-icons/action/grade';
-import BlogCard from './blog_card';
 
-var BlogList = React.createClass({
+var BlogView = React.createClass({
 	getInitialState: function() {
 		return {
 		}
@@ -16,17 +15,11 @@ var BlogList = React.createClass({
 	render() {
 		return (
 			<div>
-				<div className="row">
-					<h2>Blog</h2>
-				</div>
-				<div className="row">
-					<div className="col-xs">
-						<BlogCard openContent={this.props.openContent} />
-					</div>
-				</div>
+        <h2>Title</h2>
+        <p>Body</p>
 			</div>
 		)
 	}
 });
 
-export default BlogList;
+export default BlogView;

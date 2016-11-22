@@ -71,7 +71,7 @@ class Navbar extends React.Component {
 				<div className="topnav">
 					<ul>
 						<li>
-							<a href="#">Pablo Bello</a>
+							<a href="/">Pablo Bello</a>
 						</li>
 					</ul>
 					<div className="navbar-right" style={navbar}>
