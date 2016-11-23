@@ -16,9 +16,7 @@ var BlogList = React.createClass({
 	render() {
 		return (
 			<div>
-				<div className="row">
-					<h2>Blog</h2>
-				</div>
+        <h2>Blog</h2>
 				<div className="row">
 					<div className="col-xs">
 						<BlogCard openContent={this.props.openContent} />

@@ -1,6 +1,7 @@
 import React from 'react';
 import Timeline from './timeline';
 import Chip from 'material-ui/Chip';
+import {Card, CardText} from 'material-ui/Card';
 
 const styles = {
   chip: {
@@ -48,25 +49,34 @@ var Profile = React.createClass({
       textAlign: 'center'
     };
 
+		const card_style = {
+			marginTop: 12,
+			marginBottom: 12,
+		};
+
 		return (
 			<div>
         <div className="row">
           <div className="col-xs-12 col-sm-offset-1 col-sm-10 col-md-offset-1 col-md-10 col-lg-offset-1 col-lg-10">
-            <div style={center}>
-              <img src="/img/PabloBello.png" />
-              <br />
-              <br />
-              <h1>Pablo Bello</h1><br />
-              <h1 style={{color: '#fee52d'}}>Full Stack Developer</h1><br />
-              <p>
-                Intermediate developer with over 4 years of experience in Ruby on Rails, Javascript, HTML & CSS using Scrum and Agile Methodologies with SQL database expertise.
-              </p>
-              <br />
-              <h2>Main skills:</h2>
-            </div>
-            <div style={styles.wrapper}>
-              {this.state.chipData.map(this.renderChip, this)}
-            </div>
+              <Card style={card_style}>
+                <CardText>
+                  <div style={center}>
+                    <img src="/img/PabloBello.png" />
+                    <br />
+                    <br />
+                    <h1>Pablo Bello</h1><br />
+                    <h1 style={{color: '#FDD835', fontSize: '23px'}}>Full Stack Developer</h1><br />
+                    <p className="description">
+                      Intermediate developer with over 4 years of experience in Ruby on Rails, Javascript, HTML & CSS using Scrum and Agile Methodologies with SQL database expertise.
+                    </p>
+                    <br />
+                    <h2>Main skills:</h2>
+                  </div>
+                  <div style={styles.wrapper}>
+                    {this.state.chipData.map(this.renderChip, this)}
+                  </div>
+                </CardText>
+              </Card>
             <Timeline />
           </div>
         </div>

@@ -1,6 +1,5 @@
 import React from 'react';
 import AppBar from 'material-ui/AppBar';
-import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
 import IconButton from 'material-ui/IconButton';
 import IconMenu from 'material-ui/IconMenu';
@@ -77,18 +76,11 @@ class Navbar extends React.Component {
 					<div className="navbar-right" style={navbar}>
 						<Tabs inkBarStyle={inkBarStyle}>
 							<Tab label="Profile" style={tab} onActive={() => this.select(0)} />
-							<Tab label="Blog" style={tab} onActive={() => this.select(1)} />
+              <Tab label="Blog" style={tab} onActive={() => this.select(1)} />
 							<Tab label="Projects" style={tab} onActive={() => this.select(2)} />
 							<Tab label="Contact" style={tab} onActive={() => this.select(3)} />
 						</Tabs>
 					</div>
-					<Drawer
-						docked={false}
-						width={200}
-						open={this.state.open}
-						onRequestChange={(open) => this.setState({open})}
-					>
-					</Drawer>
 				</div>
 			</div>
 		)

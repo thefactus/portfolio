@@ -15,11 +15,7 @@ var BlogCard = React.createClass({
 
   openContent(){
     this.props.openContent(
-      <BlogView />,
-      {
-        backgroundColor: 'white',
-        color: 'black'
-      }
+      <BlogView />
     )
   },
 
@@ -37,8 +33,8 @@ var BlogCard = React.createClass({
       <div>
         <Card style={card_style}>
           <CardHeader
-            title="Post title"
-            subtitle="Post subtitle"
+            title="Hello World"
+            subtitle="Coming soon!"
           />
           <CardActions>
             <FlatButton

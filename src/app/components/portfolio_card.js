@@ -27,12 +27,8 @@ var PortfolioCard = React.createClass({
 				<Card style={card_style}>
 					<CardHeader
 					title="URL Avatar"
-					subtitle="Subtitle"
-					avatar="http://www.material-ui.com/images/jsa-128.jpg"
 					/>
-					<CardMedia
-						overlay={<CardTitle title="Overlay title" subtitle="Overlay subtitle" />}
-					>
+					<CardMedia>
 						<img src="http://www.material-ui.com/images/nature-600-337.jpg" />
 					</CardMedia>
 					<CardTitle title="Card title" subtitle="Card subtitle" />

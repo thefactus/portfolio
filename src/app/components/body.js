@@ -18,14 +18,12 @@ var Body = React.createClass({
   getInitialState() {
     return {
       content: (<Profile />),
-      contentStyle: {backgroundColor: blue900}
     };
   },
 
   openContent(content, contentStyle = this.state.contentStyle) {
     this.setState({
-      content: content,
-      contentStyle: contentStyle 
+      content: content
     });
   },
 
@@ -34,35 +32,27 @@ var Body = React.createClass({
       case 1:
         this.setState({
           content: <BlogList openContent={this.openContent} />,
-          contentStyle: {backgroundColor: blue900}
         });
         break;
       case 2:
         this.setState({
           content: <PortfolioList />,
-          contentStyle: {backgroundColor: blue900}
         });
         break;
       case 3:
         this.setState({
           content: <Contact />,
-          contentStyle: {backgroundColor: blue900}
         });
         break;
       default:
         this.setState({
           content: <Profile />,
-          contentStyle: {backgroundColor: blue900}
         });
         break;
     }
   },
 
 	render() {
-		const AppBarStyle = {
-			backgroundColor: blue900
-		};
-
 		const flat_button_style = {
 			margin: 12,
 		};

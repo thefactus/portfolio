@@ -16,9 +16,7 @@ var PortfolioList = React.createClass({
   render() {
     return (
       <div>
-        <div className="row">
-          <h2>Portfolio</h2>
-        </div>
+        <h2>Projects</h2>
         <div className="row">
           <div className="col-xs">
             <PortfolioCard />
