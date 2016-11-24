@@ -61,7 +61,7 @@ var Profile = React.createClass({
               <Card style={card_style}>
                 <CardText>
                   <div style={center}>
-                    <img src="/img/PabloBello.png" className="animated fadeInUp" />
+                    <img src="/img/PabloBello.png" />
                     <br />
                     <br />
                     <h1 className="animated fadeInUp">Pablo Bello</h1><br />
