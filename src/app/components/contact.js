@@ -31,28 +31,9 @@ var Contact = React.createClass({
                 <img src="/img/contact.jpg" />
               </CardMedia>
               <CardText>
-                To contact me, just fill the form below.
-                <TextField
-                  floatingLabelText="Your name"
-                  inputStyle={textField}
-                  floatingLabelStyle={textField}
-                  fullWidth={true}
-                />
-                <TextField
-                  floatingLabelText="Your email"
-                  inputStyle={textField}
-                  floatingLabelStyle={textField}
-                  fullWidth={true}
-                />
-                <TextField
-                  floatingLabelText="Your message"
-                  multiLine={true}
-                  rows={2}
-                  rowsMax={8}
-                  textareaStyle={textField}
-                  floatingLabelStyle={textField}
-                  fullWidth={true}
-                />
+                <p>E-mail: <a href="mailto:pablocvb1@gmail.com?subject=Hi Pablo">pablocvb1@gmail.com</a></p>
+                <p>Github: <a href="https://github.com/thefactus">github.com/thefactus</a></p>
+                <p>Facebook: <a href="https://www.facebook.com/pablo.c.bello.5">Pablo Bello</a></p>
               </CardText>
             </Card>
           </div>
