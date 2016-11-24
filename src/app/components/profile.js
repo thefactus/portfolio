@@ -64,15 +64,20 @@ var Profile = React.createClass({
                     <img src="/img/PabloBello.png" />
                     <br />
                     <br />
-                    <h1>Pablo Bello</h1><br />
-                    <h1 style={{color: '#FDD835', fontSize: '23px'}}>Full Stack Developer</h1><br />
-                    <p className="description">
+                    <h1 className="animated fadeInUp">Pablo Bello</h1><br />
+                    <h1
+                      className="animated fadeInUp"
+                      style={{color: '#00BCD4', fontSize: '23px'}}>
+
+                      Full Stack Developer
+                    </h1>
+                    <br />
+                    <p className="description animated fadeInUp">
                       Intermediate developer with over 4 years of experience in Ruby on Rails, Javascript, HTML & CSS using Scrum and Agile Methodologies with SQL database expertise.
                     </p>
                     <br />
-                    <h2>Main skills:</h2>
                   </div>
-                  <div style={styles.wrapper}>
+                  <div style={styles.wrapper} className="animated fadeInUp">
                     {this.state.chipData.map(this.renderChip, this)}
                   </div>
                 </CardText>

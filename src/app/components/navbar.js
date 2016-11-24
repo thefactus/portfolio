@@ -72,9 +72,9 @@ class Navbar extends React.Component {
           <div style={{display: 'block'}}>
             <div style={{display:'flex',justifyContent:'flex-start',padding:'15px'}}>
               <div style={{fontSize:'26px',padding:'14px',cursor:'default'}} >
-                <span>
+                <a href="/" style={{textDecoration: 'none', color: '#00BCD4'}}>
                   Pablo Bello
-                </span>
+                </a>
               </div>
               <div style={navbar} className="navbar1" >
                 <Tabs inkBarStyle={inkBarStyle}>
