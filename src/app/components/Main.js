@@ -1,14 +1,15 @@
-import React from "react";
-import injectTapEventPlugin from "react-tap-event-plugin";
+import React  from "react";
+import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import Body from "./body";
 
-const Main = (props) => {
-  return (
-    <div>
-      <Body />
-    </div>
-  );
+class Main extends React.Component {
+  render() {
+    return (
+      <MuiThemeProvider>
+        <Body />
+      </MuiThemeProvider>
+    );
+  }
 }
 
-injectTapEventPlugin();
 export default Main;
