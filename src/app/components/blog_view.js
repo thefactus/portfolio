@@ -16,10 +16,7 @@ var BlogView = React.createClass({
 		return (
 			<div>
         <Card>
-          <CardHeader title="Hello World" />
-          <CardText>
-            Coming soon!
-          </CardText>
+          <CardHeader title="Coming soon!" />
         </Card>
 			</div>
 		)

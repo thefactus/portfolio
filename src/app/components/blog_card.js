@@ -33,16 +33,8 @@ var BlogCard = React.createClass({
       <div>
         <Card style={card_style}>
           <CardHeader
-            title="Hello World"
-            subtitle="Coming soon!"
-          />
-          <CardActions>
-            <FlatButton
-              label="Read more"
-              primary={true}
-              onTouchTap={this.openContent}
+            title="Coming soon!"
             />
-          </CardActions>
         </Card>
       </div>
     )

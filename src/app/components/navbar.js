@@ -53,6 +53,7 @@ class Navbar extends React.Component {
 
 		const navbar = {
 			width: 350,
+      marginLeft: '15px'
 		};
 
 		const tab = {
@@ -67,21 +68,32 @@ class Navbar extends React.Component {
 
 		return (
 			<div>
-				<div className="topnav">
-					<ul>
-						<li>
-							<a href="/">Pablo Bello</a>
-						</li>
-					</ul>
-					<div className="navbar-right" style={navbar}>
-						<Tabs inkBarStyle={inkBarStyle}>
-							<Tab label="Profile" style={tab} onActive={() => this.select(0)} />
-              <Tab label="Blog" style={tab} onActive={() => this.select(1)} />
-							<Tab label="Projects" style={tab} onActive={() => this.select(2)} />
-							<Tab label="Contact" style={tab} onActive={() => this.select(3)} />
-						</Tabs>
-					</div>
-				</div>
+        <div className="navbar0">
+          <div style={{display: 'block'}}>
+            <div style={{display:'flex',justifyContent:'flex-start',padding:'15px'}}>
+              <div style={{fontSize:'26px',padding:'14px',cursor:'default'}} >
+                <span>
+                  Pablo Bello
+                </span>
+              </div>
+              <div style={navbar} className="navbar1" >
+                <Tabs inkBarStyle={inkBarStyle}>
+                  <Tab label="Profile" style={tab} onActive={() => this.select(0)} />
+                  <Tab label="Blog" style={tab} onActive={() => this.select(1)} />
+                  <Tab label="Projects" style={tab} onActive={() => this.select(2)} />
+                  <Tab label="Contact" style={tab} onActive={() => this.select(3)} />
+                </Tabs>
+              </div>
+              <div style={{flexGrow: 1}}>
+              </div>
+              <div>
+                <IconButton href="https://github.com/thefactus" target="_blank">
+                  <img src="img/icons/github.svg" style={{width: '24px'}} />
+                </IconButton>
+              </div>
+            </div>
+          </div>
+        </div>
 			</div>
 		)
 	}

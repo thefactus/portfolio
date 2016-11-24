@@ -18,7 +18,7 @@ var BlogList = React.createClass({
 			<div>
         <h2>Blog</h2>
 				<div className="row">
-					<div className="col-xs">
+          <div className="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-3 col-md-6 col-lg-offset-3 col-lg-6">
 						<BlogCard openContent={this.props.openContent} />
 					</div>
 				</div>

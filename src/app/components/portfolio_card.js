@@ -26,22 +26,15 @@ var PortfolioCard = React.createClass({
 			<div>
 				<Card style={card_style}>
 					<CardHeader
-					title="URL Avatar"
-					/>
+						title="Coming soon!"
+						/>
 					<CardMedia>
 						<img src="http://www.material-ui.com/images/nature-600-337.jpg" />
 					</CardMedia>
-					<CardTitle title="Card title" subtitle="Card subtitle" />
+					<CardTitle title="Project title" />
 					<CardText>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-						Donec mattis pretium massa. Aliquam erat volutpat. Nulla facilisi.
-						Donec vulputate interdum sollicitudin. Nunc lacinia auctor quam sed pellentesque.
-						Aliquam dui mauris, mattis quis lacus id, pellentesque lobortis odio.
 					</CardText>
-					<CardActions>
-						<FlatButton label="Action1" />
-						<FlatButton label="Action2" />
-					</CardActions>
 				</Card>
 			</div>
 		)

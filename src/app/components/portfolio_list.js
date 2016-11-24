@@ -18,13 +18,7 @@ var PortfolioList = React.createClass({
       <div>
         <h2>Projects</h2>
         <div className="row">
-          <div className="col-xs">
-            <PortfolioCard />
-          </div>
-          <div className="col-xs">
-            <PortfolioCard />
-          </div>
-          <div className="col-xs">
+          <div className="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-3 col-md-6 col-lg-offset-3 col-lg-6">
             <PortfolioCard />
           </div>
         </div>
