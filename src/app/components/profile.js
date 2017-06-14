@@ -18,15 +18,18 @@ var Profile = React.createClass({
   getInitialState() {
     return {
       chipData: [
-        {key: 0, label: 'Ruby on Rails'},
-        {key: 1, label: 'REST Api'},
-        {key: 2, label: 'PostgreSQL'},
-        {key: 3, label: 'ReactJS'},
-        {key: 4, label: 'TDD/BDD'},
-        {key: 5, label: 'AWS (basics - EC2, S3)'},
-        {key: 6, label: 'Vim/Tmux'},
-        {key: 7, label: 'Capistrano'},
-        {key: 8, label: 'Elasticsearch'},
+        {key: 0, label: 'Creativity'},
+        {key: 1, label: 'Ruby on Rails'},
+        {key: 2, label: 'REST API'},
+        {key: 3, label: 'PostgreSQL'},
+        {key: 4, label: 'ReactJS'},
+        {key: 5, label: 'TDD/BDD'},
+        {key: 6, label: 'AWS (basics - EC2, S3)'},
+        {key: 7, label: 'Heroku'},
+        {key: 8, label: 'Vim/Tmux'},
+        {key: 9, label: 'Capistrano'},
+        {key: 10, label: 'Elasticsearch'},
+        {key: 11, label: 'Redis/Resque'},
       ]
     };
   },
@@ -73,7 +76,7 @@ var Profile = React.createClass({
                     </h1>
                     <br />
                     <p className="description animated fadeInUp">
-                      Intermediate developer with over 4 years of experience in Ruby on Rails, Javascript, HTML & CSS using Scrum and Agile Methodologies with SQL database expertise.
+                      Developer with over 4 years of experience in Ruby on Rails, Javascript, HTML & CSS using Scrum and Agile Methodologies with SQL database expertise.
                     </p>
                     <br />
                   </div>

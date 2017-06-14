@@ -27,7 +27,7 @@ class Navbar extends React.Component {
 		this.setState({open: false});
 	}
 
-  select(index) { 
+  select(index) {
     this.setState({selectedIndex: index});
     this.props.handleContent(index);
   }

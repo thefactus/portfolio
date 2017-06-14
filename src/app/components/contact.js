@@ -34,6 +34,7 @@ var Contact = React.createClass({
                 <p>E-mail: <a href="mailto:pablocvb1@gmail.com?subject=Hi Pablo">pablocvb1@gmail.com</a></p>
                 <p>Github: <a href="https://github.com/thefactus">github.com/thefactus</a></p>
                 <p>Facebook: <a href="https://www.facebook.com/pablo.c.bello.5">Pablo Bello</a></p>
+                <p>My forum: <a href="http://discourse.starkadteam.net/">Starkad Team</a></p>
               </CardText>
             </Card>
           </div>

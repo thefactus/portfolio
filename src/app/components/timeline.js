@@ -12,7 +12,7 @@ var Timeline = React.createClass({
     const ContentTextColor = {
       color: '#9E9E9E'
     }
-    
+
 		return (
 			<div>
         <section id="cd-timeline" className="cd-container" >
@@ -24,15 +24,41 @@ var Timeline = React.createClass({
             <div className="cd-timeline-content">
               <h2>Full Stack Developer</h2>
               <div style={ContentTextColor}>
-                <h3>Freelancer</h3>
+                <h3>Remote - US based company</h3>
                 <p>
-                  ● REST API development.
+                  ● Ruby on Rails
                 </p>
                 <p>
-                  ● React/Angular JS development.
+                  ● Heroku
+                </p>
+                <p>
+                  ● Redis/Resque
+                </p>
+                <p>
+                  ● REST API
                 </p>
               </div>
-              <span className="cd-date">Jan 2016 - Present</span>
+              <span className="cd-date">Jan 2017 - Present</span>
+            </div>
+          </div>
+
+          <div className="cd-timeline-block">
+            <div className="cd-timeline-img cd-location">
+              <img src="img/icons/work.svg" />
+            </div>
+
+            <div className="cd-timeline-content">
+              <h2>Full Stack Developer</h2>
+              <div style={ContentTextColor}>
+                <h3>Freelancer</h3>
+                <p>
+                  ● REST API
+                </p>
+                <p>
+                  ● React/Angular JS
+                </p>
+              </div>
+              <span className="cd-date">Jan 2016 - Dec 2016</span>
             </div>
           </div>
 
@@ -124,7 +150,7 @@ var Timeline = React.createClass({
               <div style={ContentTextColor}>
                 <h3>Federal University of Piauí (UFPI)</h3>
                 <p>
-                  ● C, C++, C#, Java, Python, Ruby, Javascript, Haskell 
+                  ● C, C++, C#, Java, Python, Ruby, Javascript, Haskell
                 </p>
                 <p>
                   ● Mysql, Oracle
