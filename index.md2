@@ -1,8 +1,16 @@
----
-layout: default
-title: "Pablo Bello - Portfolio"
----
-
-## You're ready to go!
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>Pablo Bello - Portfolio</title>
+    <link rel="stylesheet" href="/portfolio2/assets/css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Sen&amp;display=swap" rel="stylesheet">
+  </head>
+  <body class="dark:text-white bg-nord5 text-nord0 dark:bg-nord0" style="font-family: Sen, sans-serif">
+    ## You're ready to go!
 
 Start developing your Jekyll website.
+
+  </body>
+</html>
