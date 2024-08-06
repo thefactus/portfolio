@@ -1,5 +1,5 @@
-url: "https://thefactus.github.io/portfolio/" # the base hostname & protocol for your site, e.g. http://example.com
-baseurl: "/portfolio" # the subpath of your site, e.g. /blog
+url: "https://pablobello.dev" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
 title: "Pablo Bello - Senior Software Engineer" # the name of your site, e.g. ACME Corp.
 
 
