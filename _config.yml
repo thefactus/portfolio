@@ -2,9 +2,11 @@ url: "https://pablobello.dev" # the base hostname & protocol for your site, e.g.
 baseurl: "" # the subpath of your site, e.g. /blog
 title: "Pablo Bello - Senior Software Engineer" # the name of your site, e.g. ACME Corp.
 
-
-plugins:
-  - jekyll-postcss
-
-postcss:
-  cache: false
+# Exclude from processing
+exclude:
+  - node_modules
+  - package.json
+  - package-lock.json
+  - tailwind.config.js
+  - postcss.config.js
+  - input.css
