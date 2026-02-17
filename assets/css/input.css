@@ -6,25 +6,199 @@
   html {
     scroll-behavior: smooth;
   }
-
-  body {
-    @apply bg-white dark:bg-black text-black dark:text-white;
-  }
 }
 
 @layer components {
-  .btn-primary {
-    @apply px-6 py-3 font-medium rounded-full transition-all duration-300;
-    @apply bg-black dark:bg-white text-white dark:text-black;
-    @apply border-2 border-black dark:border-white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* Primary skill badges - for main languages */
+  .skill-primary {
+    @apply px-3 py-1.5 rounded-full font-semibold text-xs;
+    @apply bg-crimson-100 text-crimson-700 border border-crimson-200;
+    @apply dark:bg-crimson-900/30 dark:text-crimson-300 dark:border-crimson-800;
+    @apply transition-all duration-300;
+    @apply hover:bg-crimson-500 hover:text-white hover:border-crimson-500;
+    @apply dark:hover:bg-crimson-600 dark:hover:text-white dark:hover:border-crimson-600;
   }
 
-  .btn-primary:hover {
-    @apply scale-105;
-    @apply bg-white dark:bg-black text-black dark:text-white;
-    @apply border-black dark:border-white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  /* Secondary skill badges */
+  .skill {
+    @apply px-2.5 py-1 rounded-md text-xs font-medium;
+    @apply bg-sand-300 text-warm-700;
+    @apply dark:bg-warm-800 dark:text-sand-300;
+    @apply transition-colors duration-200;
+    @apply hover:bg-sand-400 dark:hover:bg-warm-700;
+  }
+
+  /* Language hero badges */
+  .lang-hero {
+    @apply relative px-6 py-3 rounded-xl;
+    @apply bg-gradient-to-br from-crimson-500 to-crimson-700;
+    @apply shadow-lg hover:shadow-xl transition-all duration-300;
+    @apply hover:-translate-y-1 hover:scale-105;
+  }
+
+  .lang-hero-name {
+    @apply text-white font-bold text-lg tracking-wide;
+  }
+
+  /* Skill row - elegant list style */
+  .skill-row {
+    @apply flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-4;
+    @apply py-3 border-b border-sand-300/50 dark:border-warm-700/50;
+  }
+
+  .skill-row:last-child {
+    @apply border-b-0;
+  }
+
+  .skill-label {
+    @apply text-crimson-600 dark:text-crimson-400 font-semibold text-sm uppercase tracking-wider;
+    @apply sm:w-40 flex-shrink-0;
+  }
+
+  .skill-items {
+    @apply text-warm-700 dark:text-sand-300 text-sm leading-relaxed;
+  }
+
+  /* Small skill badges for cards */
+  .skill-small {
+    @apply px-2.5 py-1 rounded-md text-xs font-medium;
+    @apply bg-sand-100 text-warm-600 border border-sand-200;
+    @apply dark:bg-warm-800 dark:text-sand-400 dark:border-warm-700;
+  }
+
+  /* Modern job cards */
+  .job-card {
+    @apply pb-10 border-b border-sand-300/50 dark:border-warm-700/50;
+    @apply transition-all duration-300;
+  }
+
+  .job-card:last-of-type {
+    @apply border-b-0 pb-0;
+  }
+
+  .job-header {
+    @apply flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-2 mb-2;
+  }
+
+  .job-company-wrapper {
+    @apply flex items-baseline gap-3;
+  }
+
+  .job-company {
+    @apply font-display text-2xl font-bold text-warm-900 dark:text-sand-50;
+    @apply hover:text-crimson-600 dark:hover:text-crimson-400 transition-colors;
+  }
+
+  .job-industry {
+    @apply text-xs font-medium uppercase tracking-wider px-2 py-1.5 rounded-full;
+    @apply bg-sand-300 dark:bg-warm-800 text-warm-600 dark:text-sand-400;
+  }
+
+  .job-date {
+    @apply text-sm font-medium text-crimson-600 dark:text-crimson-400;
+  }
+
+  .job-title {
+    @apply text-lg font-medium text-warm-700 dark:text-sand-300 mb-3;
+  }
+
+  .job-description {
+    @apply text-warm-600 dark:text-sand-400 leading-relaxed mb-4;
+  }
+
+  .job-tech {
+    @apply text-sm text-warm-500 dark:text-sand-500;
+  }
+
+  /* Earlier roles section */
+  .earlier-roles {
+    @apply pt-6;
+  }
+
+  .earlier-roles-title {
+    @apply text-sm font-bold uppercase tracking-wider text-warm-500 dark:text-sand-500 mb-4;
+  }
+
+  .earlier-roles-grid {
+    @apply grid sm:grid-cols-2 gap-4;
+  }
+
+  .earlier-role {
+    @apply flex flex-col p-4 rounded-lg;
+    @apply bg-sand-200/50 dark:bg-warm-900/50;
+  }
+
+  .earlier-role-title {
+    @apply font-medium text-warm-900 dark:text-sand-100;
+  }
+
+  .earlier-role-company {
+    @apply text-sm text-warm-600 dark:text-sand-400;
+  }
+
+  .earlier-role-date {
+    @apply text-xs text-warm-500 dark:text-sand-500 mt-1;
+  }
+
+  /* Blog / Writing cards */
+  .blog-card {
+    @apply p-6 rounded-xl;
+    @apply bg-sand-200 dark:bg-warm-900;
+    @apply border border-sand-300 dark:border-warm-800;
+    @apply transition-all duration-300;
+    @apply hover:border-crimson-400 dark:hover:border-crimson-600;
+    @apply hover:shadow-lg;
+  }
+
+  .blog-tag {
+    @apply text-xs font-semibold uppercase tracking-wider;
+    @apply text-crimson-600 dark:text-crimson-400;
+  }
+
+  .blog-title {
+    @apply font-display text-xl font-bold text-warm-900 dark:text-sand-50;
+    @apply group-hover:text-crimson-600 dark:group-hover:text-crimson-400 transition-colors;
+  }
+
+  .blog-excerpt {
+    @apply text-warm-600 dark:text-sand-400 text-sm leading-relaxed mt-2;
+  }
+
+  /* Education card */
+  .edu-card {
+    @apply flex items-start gap-6 p-8 rounded-xl;
+    @apply bg-sand-200 dark:bg-warm-900;
+    @apply border border-sand-300 dark:border-warm-800;
+    @apply max-w-xl mx-auto;
+  }
+
+  .edu-icon {
+    @apply flex-shrink-0 w-16 h-16 rounded-full;
+    @apply bg-gradient-to-br from-crimson-500 to-crimson-700;
+    @apply flex items-center justify-center text-white;
+    @apply shadow-lg;
+  }
+
+  .edu-content {
+    @apply flex flex-col;
+  }
+
+  .edu-degree {
+    @apply text-xs font-semibold uppercase tracking-wider;
+    @apply text-crimson-600 dark:text-crimson-400;
+  }
+
+  .edu-field {
+    @apply font-display text-2xl font-bold text-warm-900 dark:text-sand-50;
+    @apply mt-1;
+  }
+
+  .edu-school {
+    @apply text-warm-600 dark:text-sand-400 mt-2;
+  }
+
+  .edu-date {
+    @apply text-sm text-warm-500 dark:text-sand-500 mt-1;
   }
 }
 
