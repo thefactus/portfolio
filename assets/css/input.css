@@ -90,12 +90,14 @@
   }
 
   .job-industry {
-    @apply text-xs font-medium uppercase tracking-wider px-2 py-1 rounded-full;
+    @apply text-xs font-medium uppercase tracking-wider px-2 py-1.5 rounded-full;
     @apply bg-sand-300 dark:bg-warm-800 text-warm-600 dark:text-sand-400;
+    @apply self-center;
   }
 
   .job-date {
     @apply text-sm font-medium text-crimson-600 dark:text-crimson-400;
+    @apply self-center;
   }
 
   .job-title {
