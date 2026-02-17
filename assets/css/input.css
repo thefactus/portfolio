@@ -77,11 +77,11 @@
   }
 
   .job-header {
-    @apply flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-2;
+    @apply flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-2 mb-2;
   }
 
   .job-company-wrapper {
-    @apply flex items-center gap-3;
+    @apply flex items-baseline gap-3;
   }
 
   .job-company {
@@ -92,12 +92,10 @@
   .job-industry {
     @apply text-xs font-medium uppercase tracking-wider px-2 py-1.5 rounded-full;
     @apply bg-sand-300 dark:bg-warm-800 text-warm-600 dark:text-sand-400;
-    @apply self-center;
   }
 
   .job-date {
     @apply text-sm font-medium text-crimson-600 dark:text-crimson-400;
-    @apply self-center;
   }
 
   .job-title {
