@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en-US" class="dark">
+  <head>
+    <script>
+      // Check for saved theme preference or default to dark
+      if (localStorage.theme === 'light') {
+        document.documentElement.classList.remove('dark');
+      } else {
+        document.documentElement.classList.add('dark');
+        localStorage.theme = 'dark';
+      }
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>Pablo Bello - Senior Software Engineer</title>
+    <link rel="icon" type="image/jpeg" href="/assets/images/avatar.jpeg">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-sand-300 text-warm-900 dark:bg-warm-950 dark:text-sand-100 font-body antialiased">
+    <!-- Theme Toggle Button -->
+<button
+  id="theme-toggle"
+  class="fixed top-6 right-6 z-50 p-3 rounded-lg bg-white dark:bg-black border-2 border-black dark:border-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-300"
+  aria-label="Toggle dark mode"
+>
+  <!-- Sun icon (shown in dark mode) -->
+  <svg class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+  </svg>
+  <!-- Moon icon (shown in light mode) -->
+  <svg class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+  </svg>
+</button>
+
+<!-- AI Agent Widget Button -->
+<button
+  id="ai-agent-toggle"
+  class="fixed bottom-6 right-6 z-50 group"
+  aria-label="Open AI Assistant"
+>
+  <div class="relative">
+    <!-- Main button with avatar -->
+    <img
+      class="w-14 h-14 rounded-full object-cover border-2 border-black dark:border-white shadow-lg hover:scale-110 transition-all duration-300"
+      src="assets/images/avatar.jpeg"
+      alt="Chat with Pablo"
+    />
+
+    <!-- Tooltip -->
+    <div class="absolute bottom-full right-0 mb-2 px-3 py-1 bg-black dark:bg-white text-white dark:text-black text-xs font-medium rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
+      Ask the AI Assistant
+    </div>
+  </div>
+</button>
+
+<!-- AI Chat Widget (hidden by default) -->
+<div
+  id="ai-chat-widget"
+  class="fixed bottom-24 right-6 z-40 w-96 h-[600px] bg-white dark:bg-black border-2 border-black dark:border-white rounded-lg shadow-2xl hidden flex-col overflow-hidden"
+>
+  <!-- Chat Header -->
+  <div class="flex items-center justify-between p-4 border-b-2 border-black dark:border-white">
+    <div class="flex items-center gap-3">
+      <img
+        class="w-10 h-10 rounded-full object-cover border-2 border-black dark:border-white"
+        src="assets/images/avatar.jpeg"
+        alt="Pablo Bello"
+      />
+      <div>
+        <h3 class="font-bold text-sm">Pablo's AI Assistant</h3>
+      </div>
+    </div>
+    <button
+      id="close-chat"
+      class="p-1 hover:bg-gray-100 dark:hover:bg-gray-900 rounded transition-colors"
+      aria-label="Close chat"
+    >
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Chat Messages Area -->
+  <div class="flex-1 p-4 overflow-y-auto bg-gray-50 dark:bg-gray-950">
+    <div class="space-y-4">
+      <!-- Welcome Message -->
+      <div class="flex gap-3">
+        <img
+          class="w-8 h-8 rounded-full object-cover border-2 border-black dark:border-white flex-shrink-0"
+          src="assets/images/avatar.jpeg"
+          alt="Pablo Bello"
+        />
+        <div class="flex-1">
+          <div class="bg-white dark:bg-black border border-black dark:border-white rounded-lg p-3">
+            <p class="text-sm">👋 Hey! Ask me anything.</p>
+          </div>
+          <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">Just now</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Chat Input Area -->
+  <div class="p-4 border-t-2 border-black dark:border-white">
+    <div class="flex gap-2">
+      <input
+        type="text"
+        placeholder="Ask me anything..."
+        class="flex-1 px-4 py-2 border-2 border-black dark:border-white rounded-lg bg-transparent focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-white"
+        disabled
+      />
+      <button
+        class="px-4 py-2 bg-black dark:bg-white text-white dark:text-black rounded-lg font-medium hover:opacity-80 transition-opacity disabled:opacity-50"
+        disabled
+      >
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+        </svg>
+      </button>
+    </div>
+    <p class="text-xs text-gray-500 dark:text-gray-400 mt-2 text-center">
+      Coming soon - AI powered responses
+    </p>
+  </div>
+</div>
+
+<script>
+  // Theme toggle
+  document.getElementById('theme-toggle').addEventListener('click', function() {
+    if (document.documentElement.classList.contains('dark')) {
+      document.documentElement.classList.remove('dark');
+      localStorage.theme = 'light';
+    } else {
+      document.documentElement.classList.add('dark');
+      localStorage.theme = 'dark';
+    }
+  });
+
+  // AI Chat widget toggle
+  const aiToggle = document.getElementById('ai-agent-toggle');
+  const aiChat = document.getElementById('ai-chat-widget');
+  const closeChat = document.getElementById('close-chat');
+
+  aiToggle.addEventListener('click', function() {
+    aiChat.classList.toggle('hidden');
+    aiChat.classList.toggle('flex');
+  });
+
+  closeChat.addEventListener('click', function() {
+    aiChat.classList.add('hidden');
+    aiChat.classList.remove('flex');
+  });
+</script>
+
+<!-- Hero Section -->
+<section class="min-h-screen flex items-center justify-center px-6 py-20">
+  <div class="max-w-4xl w-full">
+    <!-- Main content -->
+    <div class="space-y-8">
+      <!-- Avatar -->
+      <div class="mb-4">
+        <img
+          class="w-20 h-20 rounded-full object-cover border-2 border-black dark:border-white"
+          src="assets/images/avatar.jpeg"
+          alt="Pablo Bello"
+        />
+      </div>
+
+      <!-- Name & Title -->
+      <div class="space-y-2">
+        <h1 class="text-6xl md:text-7xl font-bold tracking-tight">
+          Pablo Bello
+        </h1>
+        <p class="text-2xl md:text-3xl text-gray-600 dark:text-gray-400 font-light">
+          Senior Software Engineer
+        </p>
+      </div>
+
+      <!-- Divider -->
+      <div class="w-20 h-1 bg-black dark:bg-white"></div>
+
+      <!-- Bio -->
+      <div class="max-w-2xl space-y-4">
+        <p class="text-lg md:text-xl leading-relaxed">
+          <span class="font-semibold">10+ years</span> building scalable systems with expertise in
+          <span class="font-semibold">AI/ML applications</span>.
+        </p>
+        <p class="text-lg md:text-xl leading-relaxed text-gray-600 dark:text-gray-400">
+          Proficient in RAG and agentic architectures. Strong focus on technical excellence,
+          clean code, and mentoring engineers.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="flex flex-wrap gap-4 pt-4">
+        <a href="https://github.com/thefactus" target="_blank" class="btn-primary">
+          GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/pablo-bello/" target="_blank" class="btn-primary">
+          LinkedIn
+        </a>
+        <a href="https://world.hey.com/pablobello" target="_blank" class="btn-primary">
+          Blog
+        </a>
+        <a href="mailto:pablobello@hey.com" class="btn-primary">
+          Contact
+        </a>
+      </div>
+
+      <!-- Navigation Links -->
+      <div class="pt-12">
+        <nav class="flex flex-wrap gap-6 text-sm font-medium">
+          <a href="#skills" class="hover:underline">Skills</a>
+          <a href="#projects" class="hover:underline">Projects</a>
+          <a href="#blog" class="hover:underline">Blog</a>
+          <a href="#experience" class="hover:underline">Experience</a>
+          <a href="#education" class="hover:underline">Education</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Current Projects Section -->
+<section id="projects" class="py-20">
+  <div class="max-w-4xl mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">
+        Current Projects
+      </h2>
+      <div class="w-20 h-1 bg-black dark:bg-white mx-auto"></div>
+    </div>
+
+    <div class="space-y-8">
+      <!-- Tasker -->
+      <article class="job-card group">
+        <div class="job-header">
+          <div class="job-company-wrapper">
+            <a target="_blank" href="https://mytasker.app" class="job-company">Tasker</a>
+            <span class="job-industry">AI Project Management</span>
+          </div>
+        </div>
+        <h3 class="job-title">AI Project Management Platform</h3>
+        <p class="job-description">
+          Linear-style task manager with AI assistant for conversational queries and autonomous actions (insights, task creation, messaging). Event-driven architecture with a hybrid agentic approach: function calling for structured operations and RAG with pgvector for semantic retrieval.
+        </p>
+        <div class="mb-4 mt-4">
+          <a target="_blank" href="https://mytasker.app" class="inline-flex items-center gap-2 font-medium hover:underline">
+            Visit mytasker.app
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+            </svg>
+          </a>
+        </div>
+        <div class="mb-6 mt-4">
+          <a target="_blank" href="https://mytasker.app" class="block overflow-hidden border-2 border-black dark:border-white">
+            <img src="https://mytasker.app/tasker1.png" alt="Tasker AI Project Management Platform" class="w-full h-auto" />
+          </a>
+        </div>
+        <div class="job-tech">
+          Rails 8 · GraphQL · React · Apollo · Claude Sonnet 4.5
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+  </body>
+</html>
